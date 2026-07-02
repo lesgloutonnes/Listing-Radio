@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_radio_listing_user" model="res.groups">
+        <field name="name">Utilisateur</field>
+        <field name="category_id" ref="base.module_category_uncategorized"/>
+        <field name="comment">Peut consulter les équipements (lecture seule).</field>
+    </record>
+
+    <record id="group_radio_listing_manager" model="res.groups">
+        <field name="name">Gestionnaire</field>
+        <field name="category_id" ref="base.module_category_uncategorized"/>
+        <field name="implied_ids" eval="[(4, ref('chc_radio_listing.group_radio_listing_user'))]"/>
+        <field name="comment">Peut créer, modifier, supprimer les équipements et configurer les catégories.</field>
+    </record>
+</odoo>

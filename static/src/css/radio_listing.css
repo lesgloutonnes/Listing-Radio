@@ -1,0 +1,37 @@
+/* CHC Radio Listing — styles complémentaires */
+
+/* Ligne en panne : fond légèrement rouge */
+.o_data_row.decoration-danger {
+    background-color: #fff5f5 !important;
+}
+.o_data_row.decoration-danger:hover {
+    background-color: #fee2e2 !important;
+}
+
+/* Ligne alerte maintenance : fond jaune pâle */
+.o_data_row.decoration-warning {
+    background-color: #fffbeb !important;
+}
+.o_data_row.decoration-warning:hover {
+    background-color: #fef9c3 !important;
+}
+
+/* Ligne hors service : texte grisé */
+.o_data_row.decoration-muted td {
+    color: #94a3b8 !important;
+}
+
+/* Kanban — bordure colorée selon statut */
+.oe_kanban_card.border-danger {
+    border-left: 4px solid #ef4444 !important;
+}
+.oe_kanban_card.border-warning {
+    border-left: 4px solid #f59e0b !important;
+}
+
+/* Badge statut dans la liste */
+.o_field_badge.o_field_widget span {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .3px;
+}

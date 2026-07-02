@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ─── Menu racine ──────────────────────────────────────────── -->
+    <menuitem id="menu_radio_listing_root"
+              name="CHC - Listing Radio"
+              sequence="80"
+              groups="chc_radio_listing.group_radio_listing_user"/>
+
+    <!-- ─── Application HTML (interface principale) ─────────────── -->
+    <menuitem id="menu_radio_listing_app"
+              name="Listing Radio"
+              parent="menu_radio_listing_root"
+              action="chc_radio_listing.action_listing_app"
+              sequence="1"/>
+
+    <!-- ─── Tableau de bord Odoo ─────────────────────────────────── -->
+    <menuitem id="menu_radio_dashboard"
+              name="Tableau de bord"
+              parent="menu_radio_listing_root"
+              action="chc_radio_listing.action_radio_dashboard"
+              sequence="5"/>
+
+    <!-- ─── Équipements (vues Odoo natives) ──────────────────────── -->
+    <menuitem id="menu_radio_equipments"
+              name="Équipements (Odoo)"
+              parent="menu_radio_listing_root"
+              sequence="10"/>
+
+    <menuitem id="menu_radio_equipment_all"
+              name="Tous les équipements"
+              parent="menu_radio_equipments"
+              action="chc_radio_listing.action_equipment_all"
+              sequence="1"/>
+
+    <menuitem id="menu_radio_equipment_en_panne"
+              name="En panne"
+              parent="menu_radio_equipments"
+              action="chc_radio_listing.action_equipment_en_panne"
+              sequence="2"/>
+
+    <!-- ─── Configuration (gestionnaires uniquement) ─────────────── -->
+    <menuitem id="menu_radio_config"
+              name="Configuration"
+              parent="menu_radio_listing_root"
+              sequence="90"
+              groups="chc_radio_listing.group_radio_listing_manager"/>
+
+    <menuitem id="menu_radio_categories"
+              name="Équipements"
+              parent="menu_radio_config"
+              action="chc_radio_listing.action_radio_category"
+              sequence="1"
+              groups="chc_radio_listing.group_radio_listing_manager"/>
+</odoo>

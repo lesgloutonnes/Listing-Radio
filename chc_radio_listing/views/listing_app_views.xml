@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_listing_app" model="ir.actions.act_url">
+        <field name="name">Listing Radio</field>
+        <field name="url">/chc_radio_listing/app</field>
+        <field name="target">self</field>
+    </record>
+</odoo>
